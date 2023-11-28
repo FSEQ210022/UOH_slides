@@ -12,7 +12,7 @@ format:
       background-transition: fade
       theme: default
       logo: img/horizontal_SB_color.png
-      footer: "slides: [https://fseq210022.github.io/slides_FPCUP_LATAM/slides.html](https://fseq210022.github.io/slides_FPCUP_LATAM/slides.html)"
+      footer: "slides: [https://fseq210022.github.io/UOH_slides/](https://fseq210022.github.io/UOH_slides/)"
 editor: visual
 engine: knitr
 title-slide-attributes:
