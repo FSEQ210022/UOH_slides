@@ -1,0 +1,163 @@
+---
+title: "![](img/horizontal_SB_color.png){height=80}"
+subtitle: "La sequía en Chile continental mediante el análisis de multiples indicadores climáticos<br> ![](img/logo_umayor.png){width=300} ![](img/logo_hemera.png){width=400} "
+author : "Francisco Zambrano"
+date: "`r format(Sys.Date(),'%d %b %Y')`"
+lang: es
+bibliography: references.bib
+format: 
+    revealjs:
+      slide-number: true
+      transition: fade
+      background-transition: fade
+      theme: default
+      logo: img/horizontal_SB_color.png
+      footer: "slides: [https://fseq210022.github.io/slides_FPCUP_LATAM/slides.html](https://fseq210022.github.io/slides_FPCUP_LATAM/slides.html)"
+editor: visual
+engine: knitr
+title-slide-attributes:
+    data-background-image: "img/bg.jpg"
+    data-background-size: cover
+    data-background-opacity: ".4"
+---
+
+# ¿Qué entendemos por sequía? {background-color="darkgreen"}
+
+## Confusión respecto al término `sequía`
+
+![](img/ecologist_drought.png){fig-align='center'}
+
+## Una definición (de muchas) 
+
+<!-- ```{css} -->
+<!-- .center h2 { -->
+<!--   text-align: center; -->
+<!-- } -->
+<!-- ``` -->
+
+> Cuando las condiciones `climáticas` cambian respecto a su situación `normal` provocando un `déficit` prolongado entre la `oferta` (precipitación) y la `demanda` de `agua` (temperatura) provocando impactos socio-ambientales.
+
+## Conceptualmente
+
+![](img/wmo_drought_español.png){fig-align="center"}
+
+# Objetivos {background-color='brown'}
+
+## {.smaller}
+
+**Objetivo general** 
+
+- Analizar la sequía en Chile continental mediante múltiples indicadores climáticos.
+
+**Objetivos específicos**
+
+* Analizar los cambios en el uso de de suelo entre 2001 a 2022
+* Analizar indicadores de sequía entre 1981 a 2023
+  - Precipitación
+  - Demanda evaporatíva de la atmósfera (AED)
+  - Humedad de suelo a 1 metro de profundidad
+* Analizar la variación en el estado de productividad de la vegetación entre 2000 a 2023 y su relación con los indicadores de sequía.
+
+# Aŕea de estudio {background-color='darkgreen'}
+
+## {background-image='img/map_study_con_landcover.png' background-size='contain'}
+
+# Datos {background-color="brown"}
+
+##  {background-image="img/backg_era5land.png" background-size="contain"}
+
+##  {background-image="img/bckg_modis.png" background-size="contain"}
+
+# Metodología {background-color='grey'}
+
+## Variables {.smaller}
+
+- Utiliza datos de reanálisis climático `ERA5-Land` para 1981-2023
+
+- Vegetación `MODIS` 2000-2023.
+
+-   Variables:
+    -   Precipitación `(ERA5-Land)`
+    -   Temperatura `(ERA5-Land)`
+    -   Demanda Evaporativa de la Atmósfera `(ET0 estimado con ERA5-Land)`
+    -   Humedad de suelo 1m `(ERA5-Land)`
+    -   Productividad de la vegetación`(zcNDVI derivado de MOD13A3)`
+    -   Cambio en el uso de suelo `(IGBP MCD12Q1)`
+
+## Indicadores de sequía {.smaller}
+
+`Indicadores de sequía`: Utilizan anomalías de variables climáticas agregadas en varios meses.
+
+Ventajas de los indicadores de sequía
+
+1.  Permiten comparación entre diferentes `zonas climáticas` (humedas, aridas, ...)
+2.  Permiten comparación entre diferentes `estaciones del año`.
+3.  Permiten analizar la sequía a `corto y largo plazo` (ej., mega sequía)
+4.  Se pueden categorizar de acuerdo a la ocurrencia del evento, de acuerdo a su comportamiento histórico.
+
+## Indicadores de sequía  {.smaller}
+
+-   `SPI`: índice estandarizado de precipitación [@McKee1993]
+-   `SPEI`: índice estandarizado de precipitación-Evapotranspiración [@Vicente-Serrano2010]
+-   `EDDI`: índice de sequía de demanda evaporativa [@Hobbins2016]
+-   `zcSM`: índice estandarizado de humedad de suelo (propuesto)
+-   `zcNDVI`: índice estandarizado de vegetación [@Zambrano2018]
+
+Todos calculados a agregaciones de 1, 3, 6, 12, 24 y 36 meses, excepto zcNDVI que está a 1,3 y 6 meses.
+
+Se utiliza un método `no paramétrico` en el que las probabilidades derivadas empíricamente se obtienen mediante una aproximación normal inversa [@Hobbins2016].
+
+## Análisis realizado {.smaller}
+
+- Análisis de tendencia lineal para el cambio en los usos de suelo en las macrozonas.
+
+- Análisis de la correlación temporal entre la productividad de la vegetación (zcNDVI) y los indicadores de sequía (EDDI, SPI, SPEI, zcSM).
+
+- Análisis de la tendencia para los indicadores de sequía.
+
+# Resultados {background-color='orange'}
+
+## Cambio en el uso de suelo {.smaller}
+
+**2001 a 2022**
+
+![](img/table_var_landcover_macro.png){fig-align='center'}
+
+## Uso de suelo 
+
+**Persistencia entre 2001 a 2022 (80%)**
+
+![](img/LC_pers80_per_macrozone.png){fig-align='center'}
+
+## Correlación temporal entre proxy de productividad e indicadores de sequía
+
+## {background-image='img/fig_zNDVI-6_macrozonas.png' background-size='contain'}
+
+## {background-image='img/mapa_cor_selec_indices_zcNDVI6.png' background-size='contain'}
+
+## {background-image='img/mapa_cor_r_indices_zcNDVI6.png' background-size='contain'}
+
+## {background-image='img/tabla_r_cor_macro_indice.png' background-size='contain'}
+
+Agregados por macrozona y tipo de uso de suelo.
+
+## Tendencia en los índices de sequía 1981-2023
+
+## {background-image='img/trend_raster_SPEI_1981-2023.png' background-size='contain'}
+
+## {background-image='img/trend_raster_EDDI_1981-2023.png' background-size='contain'}
+
+## {background-image='img/trend_raster_zcSM_1981-2023.png' background-size='contain'}
+
+
+## Gracias!! {.center}
+
+![](https://cdn-icons-png.flaticon.com/512/8743/8743996.png){width="50"} <https://odes-chile.org/app/unidades>\
+![](https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-512.png){width="50"} <https://www.linkedin.com/company/odes-chile/>\
+![](https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png){width="50"} [\_odeschile](https://instagram.com/_odeschile)\
+![](https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter_colored_svg-512.png){width="50"} [\@odes_chile](https://twitter.com/odes_chile)
+
+## Referencias
+
+::: {#refs}
+:::
